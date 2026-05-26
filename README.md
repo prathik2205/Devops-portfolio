@@ -67,5 +67,4 @@ aws configure
 # Default region name [None]: ap-south-2
 # Default output format [None]: json
 
-### 1. Link Your AWS Account
-Authenticate your terminal workspace with your AWS account credentials:
+
