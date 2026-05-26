@@ -9,8 +9,6 @@ A production-ready, Infrastructure-as-Code (IaC) deployment pipeline that contai
 
 Instead of deploying into a standard default cloud environment, this project programmatically builds a secure, isolated virtual network from scratch in the **ap-south-2 (Hyderabad)** region.
 
-
-
 ### Core Architectural Components:
 * **Isolated Cloud Network (VPC):** A dedicated `10.0.0.0/16` Virtual Private Cloud to segregate project infrastructure.
 * **Public Routing Layer:** A custom public subnet paired with an AWS Internet Gateway and explicit Route Table associations to facilitate inbound and outbound web traffic.
@@ -55,10 +53,16 @@ This project was built systematically using standard DevOps lifecycle workflows:
 
 ## 🚀 Local Deployment Execution Playbook
 
-To reproduce this deployment topology straight from your terminal machine workspace environment:
+Run these commands sequentially in Windows PowerShell to deploy the entire cloud infrastructure from your local machine:
 
-### 1. Programmatic Access Setup
-Link your administrative or scoped IAM user credentials locally via terminal console parameters:
+### 1. Link Your AWS Account
+Authenticate your terminal workspace with your AWS account credentials:
 ```powershell
+# Open PowerShell and configure your programmatic access keys
 aws configure
-# Provide your Access Key, Secret Token, and targeted region: ap-south-2
+
+# Prompts will appear sequentially:
+# AWS Access Key ID [None]: Paste_Your_Access_Key_ID
+# AWS Secret Access Key [None]: Paste_Your_Secret_Access_Key
+# Default region name [None]: ap-south-2
+# Default output format [None]: json
