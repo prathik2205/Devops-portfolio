@@ -65,6 +65,39 @@ aws configure
 # AWS Access Key ID [None]: Paste_Your_Access_Key_ID
 # AWS Secret Access Key [None]: Paste_Your_Secret_Access_Key
 # Default region name [None]: ap-south-2
-# Default output format [None]: json 
+# Default output format [None]: json
+```
+### 2. Initialize and Run Terraform Pipelines
+Navigate to your project folder directory and trigger the declarative infrastructure build:
+```powershell
+# Change directory to your project workspace folder
+cd C:\Users\welcome\desktop\Devops-portfolio
+
+# Download required AWS provider plugins and lock dependencies
+terraform init
+
+# Perform a deep semantic static parsing compile run to preview the changes
+terraform plan
+
+# Build the complete custom network architecture and host instance live on AWS
+terraform apply -auto-approve
+```
+🌐 Accessing the Live Application
+Once the deployment script completes execution, Terraform will automatically output your live production URL in green text directly inside your terminal window:
+
+Outputs:
+
+portfolio_public_url = "your_public_url"
+
+
+### Final Step to Host in Browser:
+Copy the generated portfolio_public_url string printed at the very end of your PowerShell session.
+
+Open any web browser tab (Chrome, Edge, Brave, etc.).
+
+Paste the URL link into the browser search bar and hit Enter.
+
+Note: On initial boot, the EC2 instance requires approximately 60–90 seconds to silently provision Docker and pull down the code. If the page doesn't load instantly, refresh after one minute.
+
 
 
