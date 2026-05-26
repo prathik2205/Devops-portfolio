@@ -16,7 +16,7 @@ data "aws_ami" "ubuntu" {
 
 # 2. Build Firewall Rule Set
 resource "aws_security_group" "portfolio_sg" {
-  name        = "portfolio-security-group"
+  name        = "portfolio-production-group"
   description = "Allow inbound HTTP and SSH traffic"
 
   ingress {
