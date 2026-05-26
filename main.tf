@@ -1,11 +1,16 @@
-# 1. Dynamically find the latest official Ubuntu 24.04 Minimal AMI in ap-south-2
+# 1. Broad query to successfully find the official Ubuntu 24.04 LTS image in ap-south-2
 data "aws_ami" "ubuntu" {
   most_recent = true
-  owners      = ["099720109477"] # Canonical ID
+  owners      = ["099720109477"] # Official Canonical Owner ID
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd-minimal/ubuntu-noble-24.04-amd64-*"]
+    values = ["ubuntu/images/*ubuntu-noble-24.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 }
 
