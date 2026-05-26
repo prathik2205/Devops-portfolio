@@ -66,3 +66,6 @@ aws configure
 # AWS Secret Access Key [None]: Paste_Your_Secret_Access_Key
 # Default region name [None]: ap-south-2
 # Default output format [None]: json
+
+### 1. Link Your AWS Account
+Authenticate your terminal workspace with your AWS account credentials:
