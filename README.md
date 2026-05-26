@@ -86,9 +86,9 @@ terraform apply -auto-approve
 Once the deployment script completes execution, Terraform will automatically output your live production URL in green text directly inside your terminal window:
 
 Outputs:
-
+```
 portfolio_public_url = "your_public_url"
-
+```
 
 ### Final Step to Host in Browser:
 Copy the generated portfolio_public_url string printed at the very end of your PowerShell session.
